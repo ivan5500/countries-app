@@ -1,3 +1,4 @@
+import { CountriesModule } from './countries.module';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { ByCapitalPageComponent } from './pages/by-capital-page/by-capital-page.component';
@@ -11,7 +12,7 @@ const routes: Routes = [
     component: ByCapitalPageComponent,
   },
   {
-    path: 'by-countries',
+    path: 'by-country',
     component: ByCountryPageComponent,
   },
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'by/:id',
     component: CountryPageComponent,
+  },
+  {
+    path: '**',
+    redirectTo: 'by-capital'
   },
 ];
 
