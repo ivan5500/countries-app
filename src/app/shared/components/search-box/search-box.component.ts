@@ -28,7 +28,7 @@ export class SearchBoxComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.suscription = this.debounce
       .pipe(
-        debounceTime(1000) // Hasta que pasa el tiempo vuelve a emitir
+        debounceTime(300) // Hasta que pasa el tiempo vuelve a emitir
       )
       .subscribe((value) => {
         console.log('debounce value', value);
